@@ -1,29 +1,35 @@
-package com.vyakta.covid.model;
-import lombok.Getter;
-import lombok.Setter;
+package com.vyakta.covid.model.persistent;
+import lombok.*;
+
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
 @Getter
 @Setter
+@NoArgsConstructor
+@AllArgsConstructor
 @Entity
+@Builder(toBuilder = true)
 @Table(name = "posts")
 public class Posts implements Serializable {
     private static final long serialVersionUID = -2971464140477370957L;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long post_id;
-    private String post_desc;
-    private Date post_create_date;
-    private Date post_request_date;
+    private int postId;
+    private String postDesc;
+    private Date postCreateDate;
+    private Date postRequestDate;
     private String type;
-    private String sub_type;
+    private String subType;
     private int quantity;
-    private long user_id;
+    private int userId;
+
     private String status;
-    private Date post_end_date;
+    private Date postEndDate;
     private String recurring;
-    private int address_id;
-    private int address_type;
+    private int addressId;
+    private int addressType;
+
+
 }
 

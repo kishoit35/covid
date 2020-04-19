@@ -1,7 +1,9 @@
 package com.vyakta.covid.repository;
 
-import com.vyakta.covid.model.Address;
+import com.vyakta.covid.model.persistent.Address;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
-public interface AddressRepository extends JpaRepository<Address, Long> {
+@Repository
+public interface AddressRepository extends JpaRepository<Address, Integer> {
 }
