@@ -103,6 +103,7 @@ public class PostActivityImpl implements PostActivity {
                 post.setLocation(addressDetail.get().getLocation());
                 post.setPincode(addressDetail.get().getPincode());
                 post.setMailId(addressDetail.get().getMailId());
+                post.setState(addressDetail.get().getState());
             }
 
 
@@ -155,6 +156,7 @@ public class PostActivityImpl implements PostActivity {
                 post.setLocation(addressDetail.get().getLocation());
                 post.setPincode(addressDetail.get().getPincode());
                 post.setMailId(addressDetail.get().getMailId());
+                post.setState(addressDetail.get().getState());
             }
 
             postsAll.add(post);
